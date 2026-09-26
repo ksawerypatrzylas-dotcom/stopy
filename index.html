@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Prezydent wysyła zdjęcia stóp z białymi paznokciami</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,500&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#faf9f6;
+    --panel:#ffffff;
+    --ink:#15181e;
+    --ink-soft:#666c78;
+    --line:#e3e0d8;
+    --accent:#c0392b;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-padding-top: env(safe-area-inset-top, 0px);}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'Space Grotesk', sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .topbar{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    max-width:760px;
+    margin:0 auto;
+    padding: 18px 20px 0;
+  }
+  .topbar .mark{
+    font-family:'Newsreader', serif;
+    font-weight:600;
+    font-size:1.15rem;
+    letter-spacing:0.2px;
+  }
+  .topbar .date{
+    font-size:0.8rem;
+    color:var(--ink-soft);
+  }
+
+  main{
+    max-width:760px;
+    margin:0 auto;
+    padding: 28px 20px 70px;
+  }
+
+  .tag{
+    display:inline-block;
+    font-size:0.8rem;
+    color:var(--accent);
+    font-style:italic;
+    margin-bottom:10px;
+  }
+
+  h1{
+    font-family:'Newsreader', serif;
+    font-weight:600;
+    font-size:clamp(2rem, 6vw, 3rem);
+    line-height:1.08;
+    letter-spacing:-0.5px;
+    margin:0 0 18px;
+  }
+
+  .meta{
+    display:flex;
+    gap:16px;
+    flex-wrap:wrap;
+    font-size:0.85rem;
+    color:var(--ink-soft);
+    padding-bottom:20px;
+    border-bottom:1px solid var(--line);
+    margin-bottom:24px;
+  }
+
+  figure{
+    margin: 0 0 28px;
+  }
+
+  /*
+    ====== TU WSTAW SWOJE ZDJĘCIE ======
+    Zmień wartość src poniżej na swój plik, np. "moje-zdjecie.jpg",
+    lub wklej dane w formacie base64: "data:image/jpeg;base64,...."
+  */
+  .photo{
+    width:100%;
+    aspect-ratio: 4/3;
+    object-fit:cover;
+    display:block;
+    border-radius:14px;
+    background:#eee;
+  }
+
+  figcaption{
+    font-size:0.8rem;
+    color:var(--ink-soft);
+    margin-top:8px;
+    line-height:1.4;
+  }
+
+  .lede{
+    font-size:1.15rem;
+    line-height:1.6;
+    color:var(--ink);
+    margin-bottom:22px;
+  }
+
+  .body p{
+    font-size:1.02rem;
+    line-height:1.7;
+    max-width:66ch;
+    margin:0 0 1.1em;
+    color:#2a2e36;
+  }
+
+  blockquote{
+    font-family:'Newsreader', serif;
+    font-style:italic;
+    font-size:1.3rem;
+    line-height:1.45;
+    color:var(--ink);
+    border-left:3px solid var(--accent);
+    padding:4px 0 4px 18px;
+    margin: 28px 0;
+  }
+
+  footer{
+    margin-top:44px;
+    padding-top:16px;
+    border-top:1px solid var(--line);
+    font-size:0.78rem;
+    color:var(--ink-soft);
+  }
+
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#111317;
+      --panel:#181b20;
+      --ink:#f1efe9;
+      --ink-soft:#9aa0ab;
+      --line:#2a2e35;
+      --accent:#e0685a;
+    }
+    .photo{ background:#20242b; }
+    .body p{ color:#d9d7cf; }
+  }
+  :root[data-theme="dark"]{
+    --bg:#111317;
+    --panel:#181b20;
+    --ink:#f1efe9;
+    --ink-soft:#9aa0ab;
+    --line:#2a2e35;
+    --accent:#e0685a;
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span class="mark">Gazeta Codzienna</span>
+  <span class="date">26 września 2026</span>
+</div>
+
+<main>
+  <article>
+    <span class="tag">Skandal na najwyższym szczeblu</span>
+    <h1>Prezydent wysyła zdjęcia stóp z białymi paznokciami</h1>
+
+    <div class="meta">
+      <span>Dział krajowy</span>
+      <span>4 min czytania</span>
+      <span>Od korespondenta politycznego</span>
+    </div>
+
+    <figure>
+      <img class="photo" src="stopy.jpg" alt="Zdjęcie ilustracyjne">
+      <figcaption>Fot. Archiwum redakcji — zdjęcie ilustracyjne.</figcaption>
+    </figure>
+
+    <p class="lede">W kuluarach władzy zawrzało po tym, jak do redakcji trafiły materiały, które — jak twierdzą nasze źródła bliskie sprawie — miały krążyć prywatnymi kanałami komunikacji na najwyższych szczeblach administracji.</p>
+
+    <div class="body">
+      <p>Anonimowy urzędnik, który zgodził się rozmawiać pod warunkiem zachowania poufności, przekazał naszej redakcji, że sprawa jest „bezprecedensowa w skali ostatnich dekad” i że gabinet prasowy przygotowuje oficjalne stanowisko. Inni rozmówcy studzą jednak emocje, sugerując, że cała sytuacja mogła zostać wyolbrzymiona przez media społecznościowe.</p>
+
+      <blockquote>„To pokazuje, że nawet na najwyższych szczeblach władzy nic już nie jest prywatne” — komentuje anonimowy ekspert ds. wizerunku.</blockquote>
+
+      <p>Politolodzy wskazują, że tego typu wydarzenia, niezależnie od ich rzeczywistej wagi, potrafią zdominować cykl medialny na wiele dni, przesłaniając debatę o sprawach, które — zdaniem części komentatorów — powinny znajdować się znacznie wyżej na liście priorytetów opinii publicznej.</p>
+
+      <p>Rzecznik urzędu, zapytany o komentarz, odmówił na razie odniesienia się do sprawy, zapowiadając jedynie, że „stosowne wyjaśnienia zostaną przedstawione we właściwym czasie”. Redakcja będzie na bieżąco monitorować rozwój wydarzeń i informować czytelników o kolejnych ustaleniach.</p>
+
+      <p>Do czasu oficjalnego potwierdzenia lub zdementowania informacji zachęcamy czytelników do zachowania ostrożności wobec krążących w sieci materiałów oraz do korzystania wyłącznie ze sprawdzonych źródeł.</p>
+    </div>
+
+    <footer>
+      Artykuł satyryczny / treść żartobliwa. Wszelkie podobieństwo do prawdziwych wydarzeń jest przypadkowe.
+    </footer>
+  </article>
+</main>
+
+</body>
+</html>
